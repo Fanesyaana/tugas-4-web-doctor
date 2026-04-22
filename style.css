@@ -72,105 +72,106 @@ img {
 }
 
 /* ===== NAVBAR ===== */
+/* Navbar Custom Styles */
 .navbar {
-    background: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #1a1a2e;
-}
-
-.logo-icon {
-    color: #3181FD;
-    font-size: 28px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-links a {
-    font-size: 14px;
-    font-weight: 500;
-    color: #555;
-    position: relative;
-    padding: 5px 0;
-}
-
-.nav-links a.active,
-.nav-links a:hover {
-    color: #3181FD;
-}
-
-.nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #3181FD;
-}
-
-.nav-links i {
-    font-size: 10px;
-    margin-left: 4px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.phone-number {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #1a1a2e;
-}
-
-.phone-number i {
-    color: #3181FD;
-    font-size: 16px;
-}
-
-.btn-appointment {
-    background: #3181FD;
-    color: #fff;
-    padding: 10px 22px;
-    border-radius: 25px;
-    font-size: 13px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    padding: 1rem 0;
     transition: all 0.3s ease;
 }
 
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    margin: 0 5px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0d6efd !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0d6efd;
+    border-radius: 2px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa;
+    color: #0d6efd;
+}
+
+/* Appointment Button */
+.btn-appointment {
+    background: #0d6efd;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: white !important;
+}
+
 .btn-appointment:hover {
-    background: #1a6de0;
+    background: #0b5ed7;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        padding: 1rem 0;
+        border-top: 1px solid #eee;
+        margin-top: 1rem;
+    }
+    
+    .nav-link {
+        padding: 8px 0 !important;
+        margin: 0;
+    }
+    
+    .nav-link.active::after {
+        display: none;
+    }
+    
+    .phone-number {
+        margin: 1rem 0;
+        justify-content: center;
+    }
+    
+    .btn-appointment {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Sticky navbar shadow on scroll */
+.navbar.scrolled {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
 .btn-appointment i {
@@ -523,152 +524,60 @@ img {
 
 /* ===== FACILITIES SECTION ===== */
 .facilities-section {
-    padding: 80px 0;
-    position: relative;
+  padding: 80px 0;
+  background: #f9f9f9;
 }
 
-.facilities-bg-shapes .shape {
-    position: absolute;
-    color: rgba(49, 129, 253, 0.1);
-    font-size: 24px;
-}
-
-.shape-5 { top: 15%; right: 2%; }
-.shape-6 { bottom: 15%; right: 2%; }
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-header h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 15px;
-}
-
-.section-header p {
-    font-size: 14px;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.facilities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.facility-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
-}
-
-.facility-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
-
-.facility-card.facility-card-blue {
-    background: linear-gradient(135deg, #3181FD 0%, #1a6de0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px;
-    grid-column: 3;
-    grid-row: 2 / 4;
-}
-
+/* gambar */
 .facility-img img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 15px;
+  display: block;
 }
 
-.facility-info {
-    padding: 20px;
+/* card umum */
+.facility-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  position: relative;
+  height: 100%;
 }
 
+/* icon */
 .facility-icon {
-    width: 50px;
-    height: 50px;
-    background: #fff3e0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.facility-icon i {
-    color: #f59e0b;
-    font-size: 20px;
+/* tombol plus */
+.plus {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 20px;
+  color: #888;
 }
 
-.facility-info h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a2e;
-    margin-bottom: 10px;
+/* card biru */
+.blue-card {
+  background: linear-gradient(135deg, #2b6cb0, #3b82f6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.facility-info p {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.7;
-}
-
-.btn-plus {
-    width: 35px;
-    height: 35px;
-    border: 1px solid #e0e0e0;
-    background: transparent;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #333;
-    font-size: 12px;
-}
-
-.btn-plus:hover {
-    background: #3181FD;
-    color: #fff;
-    border-color: #3181FD;
-}
-
-.facility-card-blue h4 {
-    color: #fff;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-}
-
-.btn-view-service {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #fff;
-    color: #3181FD;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-view-service:hover {
-    background: #1a1a2e;
-    color: #fff;
+.btn-service {
+  margin-top: 15px;
+  display: inline-block;
+  background: #fff;
+  color: #2b6cb0;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 /* ===== CONSULT SECTION ===== */
@@ -805,41 +714,51 @@ img {
     color: #666;
     margin-top: 20px;
 }
+t
 
 /* ===== GALLERY SECTION ===== */
+
+.gallery-header-wrapper h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+  margin: 0;
+}
+.gallery-header-wrapper h2 span {
+  color: #3181FD;
+  font-weight: 700;
+}
 .gallery-section {
     padding: 80px 0;
 }
 
-.gallery-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.gallery-header h2 {
+.gallery-section h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #1a1a2e;
     line-height: 1.3;
 }
 
 .btn-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     background: #3181FD;
-    color: #fff;
+    color: white;
     padding: 10px 22px;
     border-radius: 25px;
     font-size: 13px;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .btn-view-all:hover {
     background: #1a6de0;
+    transform: translateY(-2px);
+}
+
+.gallery-wrapper {
+    overflow: hidden;
 }
 
 .gallery-grid {
@@ -852,11 +771,12 @@ img {
     border-radius: 12px;
     overflow: hidden;
     position: relative;
+    aspect-ratio: 4/3;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 220px;
+    height: 100%;
     object-fit: cover;
     transition: all 0.3s ease;
 }
@@ -865,6 +785,7 @@ img {
     transform: scale(1.05);
 }
 
+/* Gallery Item Center dengan Overlay */
 .gallery-item-center {
     position: relative;
 }
@@ -874,43 +795,185 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.6);
-    padding: 15px;
-    color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item-center:hover .gallery-overlay {
+    opacity: 1;
 }
 
 .gallery-overlay h5 {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 .gallery-overlay .btn-plus {
-    background: #fff;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    background: white;
     color: #3181FD;
-    border: none;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 12px;
 }
 
+.gallery-overlay .btn-plus:hover {
+    background: #3181FD;
+    color: white;
+    border-color: #3181FD;
+}
+
+/* Gallery Dots Navigation */
 .gallery-dots {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-top: 30px;
 }
 
-.dot {
+.gallery-dots .dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: #ddd;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
-.dot.active {
+.gallery-dots .dot.active {
     background: #3181FD;
     width: 30px;
     border-radius: 5px;
+}
+
+/* ===== GALLERY HEADER STYLES ===== */
+.gallery-header-wrapper h2 {
+    font-size: 36px;       /* Ukuran font besar */
+    font-weight: 700;      /* Huruf tebal */
+    color: #1a1a2e;        /* Warna hitam gelap */
+    line-height: 1.3;
+    margin: 0;
+}
+
+.gallery-header-wrapper h2 span {
+    color: #3181FD;        /* Warna biru spesifik */
+    font-weight: 700;      /* Pastikan span juga tebal */
+}
+
+/* Style Tombol View All */
+.btn-view-all-gallery {
+    background: #3181FD;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;   /* Membuat tombol lonjong */
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-view-all-gallery:hover {
+    background: #1a6de0;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* ===== GALLERY GRID LAYOUT ===== */
+.gallery-grid {
+    display: grid;
+    /* Membuat 5 kolom sama rata */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;             /* Jarak antar gambar */
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;     /* Menjaga rasio gambar agar kotak */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Agar gambar tidak gepeng */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay khusus gambar tengah */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-center:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay h5 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.btn-plus {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    border: none;
+    color: #3181FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== RESPONSIVE GALLERY ===== */
+@media (max-width: 991px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tablet: 3 kolom */
+    }
+    .gallery-header-wrapper h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* HP: 2 kolom */
+    }
+    .gallery-header-wrapper h2 {
+        font-size: 24px;
+        text-align: center; /* HP: Judul rata tengah */
+    }
+    .btn-view-all-gallery {
+        margin-top: 15px;
+        width: 100%;        /* HP: Tombol penuh */
+        justify-content: center;
+    }
 }
 
 /* ===== DOCTORS SECTION ===== */
