@@ -3,53 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumah sakit</title>
+    <title>Merido - Healthcare</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
 <!-- Top Bar -->
-<div class="top-bar">
-    <div class="container">
-        <div class="top-bar-left">
-            <span><i class="fas fa-envelope"></i> RSzaelnaa.com</span>
+
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <!-- kiri -->
+        <div>
+            <i class="fas fa-envelope"></i> emailpokoknya.com
         </div>
-        <div class="top-bar-right">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+
+        <!-- kanan -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
+
     </div>
 </div>
 
+
 <!-- Navbar -->
-<nav class="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
     <div class="container">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon"><i class="fas fa-gem"></i></span>
-                <span class="logo-text">Merido</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#" class="active">Services</a></li>
-                <li><a href="#">Doctors</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Pages <i class="fas fa-chevron-down"></i></a></li>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <span class="logo-icon me-2"><i class="fas fa-gem text-primary"></i></span>
+            <span class="logo-text fw-bold">Miana</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#service">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#doctor">Doctors</a></li>
+                <li class="nav-item"><a class="nav-link" href="#artikel">Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages <i class="fas fa-chevron-down small"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Subpage 1</a></li>
+                        <li><a class="dropdown-item" href="#">Subpage 2</a></li>
+                    </ul>
+                </li>
             </ul>
-            <div class="nav-right">
-                <div class="phone-number">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+(444) 864 434 57</span>
+
+            <div class="d-flex align-items-center gap-3 flex-wrap justify-content-center justify-content-lg-end">
+                <div class="phone-number d-none d-lg-flex align-items-center text-muted">
+                    <i class="fas fa-phone-alt me-2 text-primary"></i>
+                    <span class="fw-medium">+(62) 123 456 78</span>
                 </div>
-                <a href="#" class="btn-appointment">Appointment <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-primary btn-appointment px-4 py-2 rounded-pill">
+                    Janji temu <i class="fas fa-arrow-right ms-1"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -57,6 +84,7 @@
 
 <!-- Hero Section -->
 <section class="hero">
+  <div id="home">
     <div class="hero-bg-shapes">
         <span class="shape shape-1"><i class="fas fa-plus"></i></span>
         <span class="shape shape-2"><i class="fas fa-plus"></i></span>
@@ -64,34 +92,39 @@
         <span class="shape shape-4"><i class="fas fa-plus"></i></span>
     </div>
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-badge"><i class="fas fa-dna"></i></div>
-                <h1>Genuine Treatments<br>for your <span class="text-stroke">Health.</span></h1>
-                <p>Lectus vestibulum mattis ullamcorper velit sed ullamcorper. Nunc semper hendrerit gravida rutrum quisque.</p>
-                <a href="#" class="btn-details">More Details <i class="fas fa-arrow-right"></i></a>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="hero-text">
+                    <div class="hero-badge"><i class="fas fa-dna"></i></div>
+                    <h1>Perawatan terbaik<br>untuk<span class="text-stroke">Kesehatan anda</span></h1>
+                    <p>Kami memberikan layanan kesehatan terbaik dengan tenaga medis profesional dan fasilitas modern.</p>
+                    <a href="#" class="btn-details">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-doctor-img">
-                    <img src="img/doctor.png" alt="Doctor">
-                </div>
-                <div class="rating-badge">
-                    <span class="rating-number">95%</span>
-                    <span class="rating-label">Positive Rating</span>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+            <div class="col-lg-6">
+                <div class="hero-image position-relative">
+                    <div class="hero-doctor-img">
+                        <img src="img/doctor.png" alt="Doctor" class="img-fluid">
                     </div>
-                </div>
-                <div class="emergency-badge">
-                    <span class="pulse-dot"></span>
-                    24/7 Emergency Service
+                    <div class="rating-badge">
+                        <span class="rating-number">95%</span>
+                        <span class="rating-label"> Rating</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="emergency-badge">
+                        <span class="pulse-dot"></span>
+                        24/7 Emergency Service
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -99,26 +132,36 @@
 <section class="booking-section">
     <div class="container">
         <div class="booking-form">
-            <div class="form-tabs">
-                <button class="tab-btn">Online Consulting</button>
-                <button class="tab-btn active">Health Check</button>
-            </div>
-            <div class="form-fields">
-                <div class="form-group">
-                    <label>Appointment</label>
-                    <input type="text" placeholder="Date">
+            <div class="row g-3 align-items-end">
+                <div class="col-12 col-md-3">
+                    <div class="form-tabs">
+                        <button class="tab-btn">Konsultasi online</button>
+                        <button class="tab-btn active">Cek Kesehatan</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Location</label>
-                    <input type="text" placeholder="Location">
+                <div class="col-6 col-md-2">
+                    <div class="form-group">
+                        <label>appointment</label>
+                        <input type="text" placeholder="Date" class="form-control">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Specialist</label>
-                    <select>
-                        <option>Specialist</option>
-                    </select>
+                <div class="col-6 col-md-2">
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="Location" class="form-control">
+                    </div>
                 </div>
-                <button class="btn-booking">Booking Now <i class="fas fa-arrow-right"></i></button>
+                <div class="col-6 col-md-2">
+                    <div class="form-group">
+                        <label>Specialist</label>
+                        <select class="form-select">
+                            <option>Specialist</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <button class="btn-booking w-100">Booking sekarang <i class="fas fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -126,107 +169,130 @@
 
 <!-- Drugs & Therapies Section -->
 <section class="drugs-section">
+  <div id="about">
     <div class="container">
-        <div class="drugs-content">
-            <div class="drugs-image">
-                <img src="img/doctor2.jpg" alt="Surgery">
-            </div>
-            <div class="drugs-text">
-                <h2>Drugs & Therapies can<br><strong>Reduce the Attacks.</strong></h2>
-                <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare. Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                <div class="quote-box">
-                    <img src="img/doctor3.jpg" alt="Author">
-                    <p>"Nulla facilisi nullam vehicula <strong>ipsum arcu cursus vitae</strong> dignissim suspendisse in est ante in nibh".</p>
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <div class="drugs-image">
+                    <img src="doctor5.jpg" alt="Surgery" class="img-fluid rounded-3">
                 </div>
-                <a href="#" class="btn-details">More Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-7">
+                <div class="drugs-text">
+                    <h2>Obat & Terapi dapat<br><strong>Mengurangi Risiko Serangan.</strong></h2>
+                    <p>Memberikan kemudahan yang besar serta waktu yang tepat untuk berbagai kebutuhan. Layanan ini dirancang untuk memberikan kenyamanan dan keindahan, serta mendukung keseimbangan dalam berbagai aspek kehidupan.</p>
+                    <div class="quote-box">
+                        <img src="doctor2.jpg" alt="Author" class="rounded-circle">
+                        <p> kami memberikan layanan<strong>dengan baik </strong> dan ada orang yang ha keliatanya.</p>
+                    </div>
+                    <a href="#" class="btn-details">Detail lainnya <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </div>
+  
 </section>
 
 <!-- Immediate Care Facilities -->
 <section class="facilities-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Merido <span class="text-blue">Immediate Care</span> Facilities<br>Provide Quick Care and Relief</h2>
-            <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare. Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- KIRI -->
+      <div class="col-lg-4 d-flex flex-column gap-4">
+
+        <!-- GAMBAR -->
+        <div class="facility-img">
+          <img src="doctor3.jpg" alt="doctor">
         </div>
-        <div class="facilities-grid">
-            <div class="facility-card">
-                <div class="facility-img">
-                    <img src="img/doctor4.jpg" alt="Blood Clotting">
-                </div>
-                <div class="facility-info">
-                    <div class="facility-icon"><i class="fas fa-lungs"></i></div>
-                    <h4>Blood Clotting Disorder</h4>
-                    <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare. Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                    <button class="btn-plus"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="facility-card">
-                <div class="facility-info">
-                    <div class="facility-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h4>Generics Strategies</h4>
-                    <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare. Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                    <button class="btn-plus"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="facility-card">
-                <div class="facility-info">
-                    <div class="facility-icon"><i class="fas fa-flask"></i></div>
-                    <h4>Wound healing genes</h4>
-                    <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare. Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                    <button class="btn-plus"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="facility-card">
-                <div class="facility-info">
-                    <div class="facility-icon"><i class="fas fa-vials"></i></div>
-                    <h4>Springtime Allergies</h4>
-                    <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare. Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                    <button class="btn-plus"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="facility-card facility-card-blue">
-                <div class="facility-info">
-                    <h4>Merido Care<br>Facilities Provide Quick</h4>
-                    <a href="#" class="btn-view-service">View all Service <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+
+        <!-- CARD BAWAH -->
+        <div class="facility-card">
+          <div class="facility-icon">🫁</div>
+          <h4>Blood Clotting Disorder</h4>
+          <p>Faslis neque aliquet lorem ipsum dolor sit amet.</p>
+          <span class="plus">+</span>
         </div>
+
+      </div>
+
+      <!-- KANAN -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+
+          <div class="col-md-6">
+            <div class="facility-card">
+              <div class="facility-icon">❤️</div>
+              <h4>Generics Strategies</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <span class="plus">+</span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="facility-card">
+              <div class="facility-icon">💊</div>
+              <h4>Wound healing genes</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <span class="plus">+</span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="facility-card">
+              <div class="facility-icon">🧪</div>
+              <h4>Springtime Allergies</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <span class="plus">+</span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="facility-card blue-card">
+              <h4>Meiana care<br>Fasilitas lengkap</h4>
+              <a href="#" class="btn-service">View all Service →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-    <div class="facilities-bg-shapes">
-        <span class="shape shape-5"><i class="fas fa-plus"></i></span>
-        <span class="shape shape-6"><i class="fas fa-plus"></i></span>
-    </div>
+  </div>
+  </div>
 </section>
 
 <!-- Consult Doctors Section -->
 <section class="consult-section">
+  <div id="service"
     <div class="container">
-        <div class="consult-content">
-            <div class="consult-left">
-                <h2>Consult The <span class="text-blue">Best Doctors</span> In<br>The Departments</h2>
-                <div class="consult-decor"></div>
-                <ul class="doctor-tabs">
-                    <li class="active">Consulting Top Doctors</li>
-                    <li>Primary Health Care</li>
-                    <li>Quality & Patient Safety</li>
-                    <li>Prefect Health</li>
-                    <li>Essentials</li>
-                    <li>Rehabilitation Consult</li>
-                </ul>
-            </div>
-            <div class="consult-right">
-                <div class="consult-img-wrapper">
-                    <img src="img/doctor10.jpg" alt="Doctors">
-                    <div class="consult-info">
-                        <h4>Say Hello to Surgeon</h4>
-                        <p>Facilisis magna etiam tempor orci eu lobortis elementum ducisslis volutpat est velit egestas.</p>
-                        <a href="#" class="btn-play"><i class="fas fa-play"></i></a>
-                    </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <div class="consult-left">
+                    <h2>Konsultan<span class="text-blue">dokter terbaik</span> Di<br> rumah sakit</h2>
+                    <div class="consult-decor"></div>
+                    <ul class="doctor-tabs">
+                        <li class="active">dokter konsultasi terbaik</li>
+                        <li>Primary Health Care</li>
+                        <li>Solusi tepat setiap saat.</li>
+                        <li>kesehatan terbaik</li>
+                        <li>essentias</li>
+                        <li>rehabilitas</li>
+                    </ul>
                 </div>
-                <p class="consult-desc">Facilisis magna etiam tempor orci eu lobortis eget elementum gravid imperdiet.</p>
+            </div>
+            <div class="col-lg-7">
+                <div class="consult-right">
+                    <div class="consult-img-wrapper position-relative rounded-3 overflow-hidden">
+                        <img src="doctor9.jpg" alt="Doctors" class="img-fluid w-100">
+                        <div class="consult-info">
+                            <h4>Berkenalan dengan Dokter Bedah</h4>
+                            <p>Komitmen kami untuk pelayanan kesehatan berkualitas.</p>
+                            <a href="#" class="btn-play"><i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                    <p class="consult-desc">"Temui dokter bedah berpengalaman yang siap membantu Anda."</p>
+                </div>
             </div>
         </div>
     </div>
@@ -236,105 +302,140 @@
     </div>
 </section>
 
+
 <!-- Gallery Section -->
 <section class="gallery-section">
-    <div class="container">
-        <div class="gallery-header">
-            <h2>Our Gallery Best Doctors<br><span class="text-blue">Healthy Treatment</span></h2>
-            <a href="#" class="btn-view-all">View all Gallery <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="img/doctor6.jpg" alt="Gallery 1">
+   <!-- Gallery Section Header -->
+<div class="container">
+    <div class="gallery-header-wrapper mb-5">
+        <div class="row align-items-center">
+            <!-- Bagian Kiri: Judul -->
+            <div class="col-lg-8 col-md-7">
+                <h2 class="gallery-title">
+                    Galery dokter terbaik<br>
+                    <span class="text-primary">Treatmen kesehatan</span>
+                </h2>
             </div>
-            <div class="gallery-item">
-                <img src="img/doctor5.jpg" alt="Gallery 2">
+            
+            <!-- Bagian Kanan: Tombol View All -->
+            <div class="col-lg-4 col-md-5 text-md-end mt-3 mt-md-0">
+                <a href="#" class="btn-view-all-gallery">
+                    View all Gallery <i class="fas fa-arrow-right ms-2"></i>
+                </a>
             </div>
-            <div class="gallery-item gallery-item-center">
-                <img src="img/doctor7.jpg" alt="Gallery 3">
-                <div class="gallery-overlay">
-                    <h5>Cardiac Imaging and<br>Stress Testing</h5>
-                    <button class="btn-plus"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/doctor8.jpg" alt="Gallery 4">
-            </div>
-            <div class="gallery-item">
-                <img src="img/doctor9.jpg" alt="Gallery 5">
-            </div>
-        </div>
-        <div class="gallery-dots">
-            <span class="dot"></span>
-            <span class="dot active"></span>
-            <span class="dot"></span>
         </div>
     </div>
+
+    <!-- Bagian Grid Gambar (5 Kolom) -->
+    <div class="gallery-grid">
+        <!-- Item 1 -->
+        <div class="gallery-item">
+            <img src="doctor4.jpg" alt="Gallery 1">
+        </div>
+        <!-- Item 2 -->
+        <div class="gallery-item">
+            <img src="doctor5.jpg" alt="Gallery 2">
+        </div>
+        <!-- Item 3 (Tengah dengan Overlay) -->
+        <div class="gallery-item gallery-center">
+            <img src="doctor4.jpg" alt="Gallery 3">
+            <div class="gallery-overlay">
+                <h5>Cardiac Imaging and<br>Stress Testing</h5>
+                <button class="btn-plus"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="gallery-item">
+            <img src="doctor5.jpg" alt="Gallery 4">
+        </div>
+        <!-- Item 5 -->
+        <div class="gallery-item">
+            <img src="doctor6.jpg" alt="Gallery 5">
+        </div>
+    </div>
+
+    <!-- Dots Navigation -->
+    <div class="gallery-dots text-center mt-4">
+        <span class="dot"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+</div>
 </section>
 
 <!-- Doctors Section -->
 <section class="doctors-section">
+  <div id="doctor"
     <div class="container">
-        <div class="section-header">
-            <h2>We Are Here For You</h2>
-            <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare natoque placerat in egestas erat imperdiet.</p>
+        <div class="section-header text-center mb-5">
+            <h2>Kami di sini untukmu</h2>
+            <p>"Kami hadir menemani setiap langkah kesehatan Anda."</p>
         </div>
-        <div class="doctors-grid">
-            <div class="doctor-card">
-                <div class="doctor-avatar">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop" alt="Dr. Ravi">
-                    <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
-                </div>
-                <h4>Dr. Ravi O'Leigh</h4>
-                <span>Cardiac Surgery</span>
-                <div class="doctor-social">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="doctor-card">
-                <div class="doctor-avatar">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop" alt="Dr. Hugh">
-                    <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
-                </div>
-                <h4>Dr. Hugh Saturation</h4>
-                <span>Gynecology</span>
-                <div class="doctor-social">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <div class="row g-4">
+            <div class="col-6 col-lg-3">
+                <div class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="doctor11.jpg" alt="Dr. Ravi" class="img-fluid">
+                        <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
+                    </div>
+                    <h4>Dr. Ravi O'Leigh</h4>
+                    <span>Cardiac Surgery</span>
+                    <div class="doctor-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="doctor-card">
-                <div class="doctor-avatar">
-                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964ac31?w=200&h=200&fit=crop" alt="Dr. Ruby">
-                    <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
-                </div>
-                <h4>Dr. Ruby Von Rails</h4>
-                <span>Cardiology</span>
-                <div class="doctor-social">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="col-6 col-lg-3">
+                <div class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="doctor10.jpg" alt="Dr.azek" class="img-fluid">
+                        <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
+                    </div>
+                    <h4>Dr. azekannsek</h4>
+                    <span>Gynecology</span>
+                    <div class="doctor-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="doctor-card">
-                <div class="doctor-avatar">
-                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=200&h=200&fit=crop" alt="Dr. Barry">
-                    <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
+            <div class="col-6 col-lg-3">
+                <div class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="doctor13.jpg" alt="Dr. Ruby" class="img-fluid">
+                        <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
+                    </div>
+                    <h4>Dr. raimbow ruby</h4>
+                    <span>Cardiology</span>
+                    <div class="doctor-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-                <h4>Dr. Barry Tonic</h4>
-                <span>Diatrics</span>
-                <div class="doctor-social">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="doctor14.jpg" alt="Dr. inces" class="img-fluid">
+                        <div class="doctor-badge"><i class="fas fa-phone-alt"></i></div>
+                    </div>
+                    <h4>Dr.  princes imut</h4>
+                    <span>Diatrics</span>
+                    <div class="doctor-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="#" class="btn-view-all-doctors">View All Doctors <i class="fas fa-arrow-right"></i></a>
+        <div class="text-center mt-5">
+            <a href="#" class="btn-view-all-doctors">Lihat dokter lainnya <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
     <div class="doctors-bg-shapes">
@@ -346,30 +447,34 @@
 <!-- Testimonials Section -->
 <section class="testimonials-section">
     <div class="container">
-        <div class="testimonials-content">
-            <div class="testimonial-image">
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&h=400&fit=crop" alt="Happy Client">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="testimonial-image">
+                    <img src="doctor8.jpg" alt="Happy Client" class="img-fluid rounded-3">
+                </div>
             </div>
-            <div class="testimonial-text">
-                <h2>Our Client Happy<br>Say About Us</h2>
-                <div class="stars stars-gold">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"Lorem ipsum dolor/Arcu risus quis varius quam quisque id diam. mauris consecteur adipiscing elit, sed do elusm commodo imperdiet."</p>
-                <div class="testimonial-author">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
-                    <div>
-                        <h5>Jarvis Pepperpsroy</h5>
-                        <span>Designer</span>
+            <div class="col-lg-6">
+                <div class="testimonial-text">
+                    <h2>client kami<br>berbicara tentang Kami</h2>
+                    <div class="stars stars-gold">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                </div>
-                <div class="testimonial-nav">
-                    <button class="nav-btn"><i class="fas fa-arrow-left"></i></button>
-                    <button class="nav-btn active"><i class="fas fa-arrow-right"></i></button>
+                    <p>"Pelayanannya sangat ramah dan profesional, saya merasa sangat terbantu."</p>
+                    <div class="testimonial-author">
+                        <img src="doctor10.jpg" alt="Author" class="rounded-circle">
+                        <div>
+                            <h5>Tukang bakso</h5>
+                            <span>bubur pecel</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-nav">
+                        <button class="nav-btn"><i class="fas fa-arrow-left"></i></button>
+                        <button class="nav-btn active"><i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,55 +487,62 @@
 
 <!-- News Section -->
 <section class="news-section">
+  <div id="artikel"
     <div class="container">
-        <div class="section-header">
-            <h2>Our <span class="text-blue">Latest</span><br><span class="text-blue">News and Advices</span></h2>
-            <p>Facilisis magna etiam tempor orci eu lobortis elementum. Facilisis volutpat est velit egestas dui id ornare. Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
+        <div class="section-header text-center mb-5">
+            <h2>Our <span class="text-blue">Latest</span><br><span class="text-blue">Berita & saran</span></h2>
+            <p>Informasi terkini dan saran terbaik seputar kesehatan.</p>
         </div>
-        <div class="news-grid">
-            <div class="news-card">
-                <div class="news-img">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop" alt="News">
-                    <span class="news-tag">Neurology</span>
-                </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span><i class="fas fa-user"></i> Admin</span>
-                        <span><i class="fas fa-calendar"></i> January 16, 2024</span>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card">
+                    <div class="news-img position-relative">
+                        <img src="doctor17.jpg" alt="News" class="img-fluid w-100">
+                        <span class="news-tag">Neurology</span>
                     </div>
-                    <h4>Latest Equipment for the<br>Heart Treatment.</h4>
-                    <p>Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                    <a href="#" class="btn-read">View all Blog <i class="fas fa-arrow-right"></i></a>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-calendar"></i> Maret 16, 2025</span>
+                        </div>
+                        <h4>Teknologi terbaru untuk<br>Perawatan jantung.</h4>
+                        <p>Inovasi terbaru dalam penanganan penyakit jantung.</p>
+                        <a href="#" class="btn-read">View all Blog <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="news-card">
-                <div class="news-img">
-                    <img src="https://images.unsplash.com/photo-1551190822-a9ce113ac100?w=400&h=250&fit=crop" alt="News">
-                    <span class="news-tag">Surgery</span>
-                </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span><i class="fas fa-user"></i> Habibo</span>
-                        <span><i class="fas fa-calendar"></i> March 16, 2024</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card">
+                    <div class="news-img position-relative">
+                        <img src="doctor13.jpg" alt="News" class="img-fluid w-100">
+                        <span class="news-tag">Surgery</span>
                     </div>
-                    <h4>Transfusion Strategy and<br>Heart Surgery.</h4>
-                    <p>Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                    <a href="#" class="btn-read">View all Blog <i class="fas fa-arrow-right"></i></a>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="fas fa-user"></i> Habibo</span>
+                            <span><i class="fas fa-calendar"></i> March 16, 2024</span>
+                        </div>
+                        <h4>Transfusion Strategy and<br>Heart Surgery.</h4>
+                        <p>Perencanaan transfusi yang tepat dalam operasi jantung.</p>
+                        <a href="#" class="btn-read">View all Blog <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="news-card">
-                <div class="news-img">
-                    <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=400&h=250&fit=crop" alt="News">
-                    <span class="news-tag">Cardiology</span>
-                </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span><i class="fas fa-user"></i> Admin</span>
-                        <span><i class="fas fa-calendar"></i> June 16, 2024</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card">
+                    <div class="news-img position-relative">
+                        <img src="doctor11.jpg" alt="News" class="img-fluid w-100">
+                        <span class="news-tag">Cardiology</span>
                     </div>
-                    <h4>We need to talk more about<br>the realities fourth.</h4>
-                    <p>Eget gravida cum sociis natoque placerat in egestas erat imperdiet.</p>
-                    <a href="#" class="btn-read">View all Blog <i class="fas fa-arrow-right"></i></a>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-calendar"></i> June 16, 2025</span>
+                        </div>
+                        <h4>We need to talk more about<br>the realities fourth.</h4>
+                        <p>Mari kita bahas fakta dan realitas yang sesungguhnya.</p>
+                        <a href="#" class="btn-read">View all Blog <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -441,10 +553,16 @@
 <section class="newsletter-section">
     <div class="container">
         <div class="newsletter-content">
-            <h3>Latest Updates Subscribe<br>To Our Newsletter.</h3>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Enter your mail">
-                <button class="btn-submit">SUBMIT</button>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Latest Updates Subscribe<br>To Our Newsletter.</h3>
+                </div>
+                <div class="col-lg-6">
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your mail" class="form-control">
+                        <button class="btn-submit">SUBMIT</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -452,67 +570,77 @@
 
 <!-- Footer -->
 <footer class="footer">
+  <div id="contact"
     <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <div class="logo">
-                    <span class="logo-icon"><i class="fas fa-gem"></i></span>
-                    <span class="logo-text">Merido</span>
-                </div>
-                <p>Subscribe to our newsletter today to receive latest news administrative cost effective for tactical data.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="active"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Usefull Link</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy policy</a></li>
-                    <li><a href="#">ChangeLog</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Popular Services</h4>
-                <ul>
-                    <li><a href="#">Cardiology Care</a></li>
-                    <li><a href="#">Urgent Care</a></li>
-                    <li><a href="#">Orthopedic Care</a></li>
-                    <li><a href="#">Diagnosis Department</a></li>
-                    <li><a href="#">Gastroenterology</a></li>
-                    <li><a href="#">Therapy department</a></li>
-                    <li><a href="#">Dental service</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Recent Post</h4>
-                <div class="recent-post">
-                    <img src="https://images.unsplash.com/photo-1551190822-a9ce113ac100?w=80&h=60&fit=crop" alt="Post">
-                    <div>
-                        <a href="#">Transfusion strategy and heart surgery.</a>
-                        <span>June 13,2021</span>
+        <div class="row g-4 py-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-col">
+                    <div class="logo">
+                        <span class="logo-icon"><i class="fas fa-gem"></i></span>
+                        <span class="logo-text">Miana</span>
+                    </div>
+                    <p>ikuti untuk mendapatkan beraji ter updtae tentang kesehatan .</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="active"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
                     </div>
                 </div>
-                <div class="recent-post">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=80&h=60&fit=crop" alt="Post">
-                    <div>
-                        <a href="#">Neurophysiology for neurological conditions.</a>
-                        <span>March 8,2021</span>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-col">
+                    <h4>Usefull Link</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">ChangeLog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-col">
+                    <h4>Popular Services</h4>
+                    <ul>
+                        <li><a href="#">Cardiology Care</a></li>
+                        <li><a href="#">Urgent Care</a></li>
+                        <li><a href="#">Orthopedic Care</a></li>
+                        <li><a href="#">Diagnosis Department</a></li>
+                        <li><a href="#">Gastroenterology</a></li>
+                        <li><a href="#">Therapy department</a></li>
+                        <li><a href="#">Dental service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-col">
+                    <h4>Recent Post</h4>
+                    <div class="recent-post">
+                        <img src="doctor15.jpg" alt="Post" class="img-fluid">
+                        <div>
+                            <a href="#">Transfusion strategy and heart surgery.</a>
+                            <span>June 13,2021</span>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <img src="doctor14.jpg" alt="Post" class="img-fluid">
+                        <div>
+                            <a href="#">Neurophysiology for neurological conditions.</a>
+                            <span>March 8,2021</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom text-center py-3">
             <p>© 2022 Weekcode All Rights Reserved by site</p>
         </div>
     </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
